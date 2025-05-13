@@ -23,7 +23,7 @@ export default function Home() {
           </p>
           {/* Description */}
           <p className="text-lg text-gray-600 mb-12 leading-relaxed animate-fade-in">
-            Clerion is a powerful web-based accounting platform designed to simplify financial management for businesses, practitioners, and administrators. From reporting to billing management, Clerion brings everything under one roof.
+            Clerion is a powerful web-based accounting platform designed to simplify financial management for businesses, practitioners, and administrators. From reporting to billing management, Clerion brings everything under one roof
           </p>
           {/* Try Now Button */}
           <a
