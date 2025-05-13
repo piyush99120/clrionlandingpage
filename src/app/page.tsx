@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-indigo-50 via-white to-indigo-50">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-8 pb-24 text-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 pointer-events-none"></div>
+      <section className="container mx-auto px-4 pt-8 pb-24 text-center relative overflow-hidden animate-fade-in">
+        <div className="absolute inset-0 bg-gradient-to-r from-fuchsia-500/20 to-violet-500/20 pointer-events-none animate-pulse"></div>
         <div className="max-w-4xl mx-auto relative">
           {/* Logo */}
           <div className="mb-12 transform hover:scale-105 transition-transform duration-300">
@@ -14,17 +14,21 @@ export default function Home() {
               alt="Clerion Logo"
               width={500}
               height={500}
-              className="mx-auto mb-6"
+              className="mx-auto mb-6 animate-float"
             />
           </div>
           {/* Tagline */}
-          <p className="text-2xl text-gray-700 mb-8 leading-relaxed animate-fade-in">
+          <p className="text-2xl text-gray-700 mb-8 leading-relaxed animate-slide-up">
             A simplified, intuitive accounting solution designed for clients, practitioners, and administrators.
+          </p>
+          {/* Description */}
+          <p className="text-lg text-gray-600 mb-12 leading-relaxed animate-fade-in">
+            Clerion is a powerful web-based accounting platform designed to simplify financial management for businesses, practitioners, and administrators. From reporting to billing management, Clerion brings everything under one roof.
           </p>
           {/* Try Now Button */}
           <a
             href="#get-started"
-            className="inline-block px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300 animate-bounce"
+            className="inline-block px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-fuchsia-600 to-violet-600 rounded-full hover:shadow-xl transform hover:scale-110 transition-all duration-300 animate-pulse-slow"
           >
             Try Now
           </a>
@@ -32,7 +36,7 @@ export default function Home() {
       </section>
 
       {/* Website Preview Section */}
-      <section className="container mx-auto px-4 py-24 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-3xl mx-4 shadow-lg">
+      <section className="container mx-auto px-4 py-24 bg-gradient-to-r from-fuchsia-50 to-violet-50 rounded-3xl mx-4 shadow-lg hover:shadow-2xl transition-all duration-500 animate-fade-in">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Left: Image */}
           <div className="w-full md:w-1/2 transform hover:scale-105 transition-transform duration-300">
@@ -81,36 +85,48 @@ export default function Home() {
       </section>
 
       {/* Solutions Section */}
-      <section className="container mx-auto px-4 py-24">
-        <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-16">What Clerion Solves</h2>
+      <section className="container mx-auto px-4 py-24 animate-fade-in">
+        <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-fuchsia-600 to-violet-600 bg-clip-text text-transparent mb-16">What Clerion Solves</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {[
             {
               title: "Automated Invoicing",
               description: "Automates invoicing and expense tracking",
-              color: "from-indigo-500 to-indigo-600"
+              color: "from-indigo-500 to-indigo-600",
+              icon: (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              )
             },
             {
               title: "Client Management",
               description: "Simplifies client and transaction management",
-              color: "from-purple-500 to-purple-600"
+              color: "from-purple-500 to-purple-600",
+              icon: (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              )
             },
             {
               title: "Financial Visibility",
               description: "Offers clear visibility into financial performance",
-              color: "from-pink-500 to-pink-600"
+              color: "from-pink-500 to-pink-600",
+              icon: (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              )
             },
             {
               title: "Secure Access",
               description: "Secure multi-role access for different user types",
-              color: "from-violet-500 to-violet-600"
+              color: "from-violet-500 to-violet-600",
+              icon: (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+              )
             }
           ].map((solution, index) => (
             <div key={index} className="group hover:transform hover:scale-105 transition-all duration-300">
-              <div className="p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-full">
+              <div className={`p-8 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 h-full transform hover:-translate-y-2 transition-all duration-300`}>
                 <div className={`w-12 h-12 rounded-lg mb-6 bg-gradient-to-r ${solution.color} flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300`}>
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    {solution.icon}
                   </svg>
                 </div>
                 <h3 className="text-2xl font-semibold text-gray-900 mb-4">{solution.title}</h3>
@@ -122,72 +138,72 @@ export default function Home() {
       </section>
 
       {/* User Roles Section */}
-      <section className="container mx-auto px-4 py-24 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-3xl mx-4">
-        <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-16">Who Is Clerion For?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto group/cards">
+      <section className="container mx-auto px-4 py-24 bg-gradient-to-r from-fuchsia-50 to-violet-50 rounded-3xl mx-4 animate-fade-in">
+        <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-fuchsia-600 to-violet-600 bg-clip-text text-transparent mb-16 animate-slide-up">Who Is Clerion For?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Client Login */}
-          <div className="group/item relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 overflow-visible hover:scale-105 hover:z-10 group-hover/cards:[&:not(:hover)]:opacity-50 group-hover/cards:[&:not(:hover)]:scale-95">
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500">
             <div className="relative z-10">
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg group-hover/item:shadow-xl transition-all duration-500 mx-auto mb-6 group-hover/item:scale-110">
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-6">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center group-hover/item:text-blue-600 transition-colors duration-300">Client Login</h3>
-              <p className="text-gray-700 text-center group-hover/item:text-blue-900 transition-colors duration-300">Clients can log in to view invoices, make payments, and track their financial history.</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Client Login</h3>
+              <p className="text-gray-700 text-center mb-6">Clients can log in to view invoices, make payments, and track their financial history.</p>
             </div>
-            <div className="absolute -right-[75%] top-0 w-[75%] h-full opacity-0 group-hover/item:opacity-100 transition-all duration-500 scale-0 group-hover/item:scale-100 origin-left">
+            <div className="relative w-full h-48 mt-6">
               <Image
                 src="/user.png"
                 alt="Client Dashboard"
                 layout="fill"
                 objectFit="contain"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl"
               />
             </div>
           </div>
 
           {/* Practitioner Login */}
-          <div className="group/item relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 overflow-visible hover:scale-105 hover:z-10 group-hover/cards:[&:not(:hover)]:opacity-50 group-hover/cards:[&:not(:hover)]:scale-95">
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500">
             <div className="relative z-10">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-green-600 rounded-2xl flex items-center justify-center shadow-lg group-hover/item:shadow-xl transition-all duration-500 mx-auto mb-6 group-hover/item:scale-110">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-400 to-green-600 rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-6">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center group-hover/item:text-green-600 transition-colors duration-300">Practitioner Login</h3>
-              <p className="text-gray-700 text-center group-hover/item:text-green-900 transition-colors duration-300">Practitioners can manage multiple client accounts, generate reports, and oversee transactions.</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Practitioner Login</h3>
+              <p className="text-gray-700 text-center mb-6">Practitioners can manage multiple client accounts, generate reports, and oversee transactions.</p>
             </div>
-            <div className="absolute -right-[75%] top-0 w-[75%] h-full opacity-0 group-hover/item:opacity-100 transition-all duration-500 scale-0 group-hover/item:scale-100 origin-left">
+            <div className="relative w-full h-48 mt-6">
               <Image
                 src="/practitoner.png"
                 alt="Practitioner Dashboard"
                 layout="fill"
                 objectFit="contain"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl"
               />
             </div>
           </div>
 
           {/* Admin Login */}
-          <div className="group/item relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500 overflow-visible hover:scale-105 hover:z-10 group-hover/cards:[&:not(:hover)]:opacity-50 group-hover/cards:[&:not(:hover)]:scale-95">
+          <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-500">
             <div className="relative z-10">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg group-hover/item:shadow-xl transition-all duration-500 mx-auto mb-6 group-hover/item:scale-110">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg mx-auto mb-6">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center group-hover/item:text-purple-600 transition-colors duration-300">Super Admin Login</h3>
-              <p className="text-gray-700 text-center group-hover/item:text-purple-900 transition-colors duration-300">Admins have full system control to manage users, roles, and configurations.</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Super Admin Login</h3>
+              <p className="text-gray-700 text-center mb-6">Admins have full system control to manage users, roles, and configurations.</p>
             </div>
-            <div className="absolute -left-[100%] top-0 w-full h-full opacity-0 group-hover/item:opacity-100 transition-all duration-500 scale-0 group-hover/item:scale-100 origin-right">
+            <div className="relative w-full h-48 mt-6">
               <Image
                 src="/Login.svg"
                 alt="Admin Dashboard"
                 layout="fill"
                 objectFit="contain"
-                className="rounded-2xl shadow-2xl"
+                className="rounded-2xl"
               />
             </div>
           </div>
